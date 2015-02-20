@@ -25,13 +25,13 @@ Partial Class VideoPokerForm
         Me.btnDrawCards = New System.Windows.Forms.Button()
         Me.cbxBet = New System.Windows.Forms.ComboBox()
         Me.lblBet = New System.Windows.Forms.Label()
+        Me.lblCreditsRemaining = New System.Windows.Forms.Label()
+        Me.lblCredits = New System.Windows.Forms.Label()
         Me.CardControl5 = New VideoPoker.CardControl()
         Me.CardControl4 = New VideoPoker.CardControl()
         Me.CardControl3 = New VideoPoker.CardControl()
         Me.CardControl2 = New VideoPoker.CardControl()
         Me.CardControl1 = New VideoPoker.CardControl()
-        Me.lblCreditsRemaining = New System.Windows.Forms.Label()
-        Me.lblCredits = New System.Windows.Forms.Label()
         Me.SuspendLayout()
         '
         'btnDrawCards
@@ -41,7 +41,7 @@ Partial Class VideoPokerForm
         Me.btnDrawCards.Name = "btnDrawCards"
         Me.btnDrawCards.Size = New System.Drawing.Size(188, 47)
         Me.btnDrawCards.TabIndex = 10
-        Me.btnDrawCards.Text = "Draw New Hand"
+        Me.btnDrawCards.Text = "Start Game"
         Me.btnDrawCards.UseVisualStyleBackColor = True
         '
         'cbxBet
@@ -68,41 +68,6 @@ Partial Class VideoPokerForm
         Me.lblBet.Text = "Bet"
         Me.lblBet.TextAlign = System.Drawing.ContentAlignment.MiddleCenter
         '
-        'CardControl5
-        '
-        Me.CardControl5.Location = New System.Drawing.Point(476, 384)
-        Me.CardControl5.Name = "CardControl5"
-        Me.CardControl5.Size = New System.Drawing.Size(104, 104)
-        Me.CardControl5.TabIndex = 15
-        '
-        'CardControl4
-        '
-        Me.CardControl4.Location = New System.Drawing.Point(366, 384)
-        Me.CardControl4.Name = "CardControl4"
-        Me.CardControl4.Size = New System.Drawing.Size(104, 104)
-        Me.CardControl4.TabIndex = 14
-        '
-        'CardControl3
-        '
-        Me.CardControl3.Location = New System.Drawing.Point(256, 384)
-        Me.CardControl3.Name = "CardControl3"
-        Me.CardControl3.Size = New System.Drawing.Size(104, 104)
-        Me.CardControl3.TabIndex = 13
-        '
-        'CardControl2
-        '
-        Me.CardControl2.Location = New System.Drawing.Point(146, 384)
-        Me.CardControl2.Name = "CardControl2"
-        Me.CardControl2.Size = New System.Drawing.Size(104, 104)
-        Me.CardControl2.TabIndex = 12
-        '
-        'CardControl1
-        '
-        Me.CardControl1.Location = New System.Drawing.Point(36, 384)
-        Me.CardControl1.Name = "CardControl1"
-        Me.CardControl1.Size = New System.Drawing.Size(104, 104)
-        Me.CardControl1.TabIndex = 11
-        '
         'lblCreditsRemaining
         '
         Me.lblCreditsRemaining.AutoSize = True
@@ -120,10 +85,49 @@ Partial Class VideoPokerForm
         Me.lblCredits.Font = New System.Drawing.Font("Microsoft Sans Serif", 16.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.lblCredits.Location = New System.Drawing.Point(476, 494)
         Me.lblCredits.Name = "lblCredits"
-        Me.lblCredits.Size = New System.Drawing.Size(48, 26)
+        Me.lblCredits.Size = New System.Drawing.Size(0, 26)
         Me.lblCredits.TabIndex = 19
-        Me.lblCredits.Text = "100"
         Me.lblCredits.TextAlign = System.Drawing.ContentAlignment.MiddleCenter
+        '
+        'CardControl5
+        '
+        Me.CardControl5.Location = New System.Drawing.Point(476, 384)
+        Me.CardControl5.Name = "CardControl5"
+        Me.CardControl5.Size = New System.Drawing.Size(104, 104)
+        Me.CardControl5.TabIndex = 15
+        Me.CardControl5.Visible = False
+        '
+        'CardControl4
+        '
+        Me.CardControl4.Location = New System.Drawing.Point(366, 384)
+        Me.CardControl4.Name = "CardControl4"
+        Me.CardControl4.Size = New System.Drawing.Size(104, 104)
+        Me.CardControl4.TabIndex = 14
+        Me.CardControl4.Visible = False
+        '
+        'CardControl3
+        '
+        Me.CardControl3.Location = New System.Drawing.Point(256, 384)
+        Me.CardControl3.Name = "CardControl3"
+        Me.CardControl3.Size = New System.Drawing.Size(104, 104)
+        Me.CardControl3.TabIndex = 13
+        Me.CardControl3.Visible = False
+        '
+        'CardControl2
+        '
+        Me.CardControl2.Location = New System.Drawing.Point(146, 384)
+        Me.CardControl2.Name = "CardControl2"
+        Me.CardControl2.Size = New System.Drawing.Size(104, 104)
+        Me.CardControl2.TabIndex = 12
+        Me.CardControl2.Visible = False
+        '
+        'CardControl1
+        '
+        Me.CardControl1.Location = New System.Drawing.Point(36, 384)
+        Me.CardControl1.Name = "CardControl1"
+        Me.CardControl1.Size = New System.Drawing.Size(104, 104)
+        Me.CardControl1.TabIndex = 11
+        Me.CardControl1.Visible = False
         '
         'VideoPokerForm
         '

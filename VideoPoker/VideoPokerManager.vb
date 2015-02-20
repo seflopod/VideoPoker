@@ -1,6 +1,7 @@
 ﻿Imports System.Collections.Generic
 
-Public Enum HandPhase
+Public Enum GamePhase
+    GameOver
     AfterDeal
     AfterDraw
 End Enum
@@ -85,7 +86,6 @@ Public Class VideoPokerManager
 
         Dim prev As String = _hand(idx).ToString()
         _hand(idx) = _deck.NextCard()
-        System.Console.WriteLine("Draw for index " & idx & ": Swap " & prev & " for " & _hand(idx).ToString())
     End Sub
 
     Public Sub DrawNewHand()
@@ -95,7 +95,7 @@ Public Class VideoPokerManager
     End Sub
 
     Public Sub PlaceBet(bet As Integer)
-        If bet < 1 Or bet > 4 Then
+        If bet < 1 Or bet > 5 Then
             _creditsBet = 1
         Else
             _creditsBet = bet
