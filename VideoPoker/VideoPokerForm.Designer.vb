@@ -34,6 +34,7 @@ Partial Class VideoPokerForm
         Me.CardControl3 = New VideoPoker.CardControl()
         Me.CardControl2 = New VideoPoker.CardControl()
         Me.CardControl1 = New VideoPoker.CardControl()
+        Me.lblLastHand = New System.Windows.Forms.Label()
         CType(Me.PictureBox1, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.SuspendLayout()
         '
@@ -141,11 +142,22 @@ Partial Class VideoPokerForm
         Me.CardControl1.TabIndex = 11
         Me.CardControl1.Visible = False
         '
+        'lblLastHand
+        '
+        Me.lblLastHand.AutoSize = True
+        Me.lblLastHand.Font = New System.Drawing.Font("Microsoft Sans Serif", 16.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.lblLastHand.Location = New System.Drawing.Point(31, 641)
+        Me.lblLastHand.Name = "lblLastHand"
+        Me.lblLastHand.Size = New System.Drawing.Size(120, 26)
+        Me.lblLastHand.TabIndex = 21
+        Me.lblLastHand.Text = "Last Hand"
+        '
         'VideoPokerForm
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
-        Me.ClientSize = New System.Drawing.Size(600, 645)
+        Me.ClientSize = New System.Drawing.Size(600, 687)
+        Me.Controls.Add(Me.lblLastHand)
         Me.Controls.Add(Me.PictureBox1)
         Me.Controls.Add(Me.lblCredits)
         Me.Controls.Add(Me.lblCreditsRemaining)
@@ -175,5 +187,6 @@ Partial Class VideoPokerForm
     Friend WithEvents lblCreditsRemaining As System.Windows.Forms.Label
     Friend WithEvents lblCredits As System.Windows.Forms.Label
     Friend WithEvents PictureBox1 As System.Windows.Forms.PictureBox
+    Friend WithEvents lblLastHand As System.Windows.Forms.Label
 
 End Class

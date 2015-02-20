@@ -4,6 +4,7 @@
     Dim _drawButton As Button
     Dim _creditsDisplay As Label
     Dim _betBox As ComboBox
+    Dim _lastHand As Label
     Private _phase As GamePhase
 
     Private Sub VideoPokerForm_Load(sender As Object, e As EventArgs) Handles MyBase.Load
@@ -24,6 +25,8 @@
                 _creditsDisplay = TryCast(c, Label)
             ElseIf c.Name.Equals("cbxBet", StringComparison.OrdinalIgnoreCase) Then
                 _betBox = TryCast(c, ComboBox)
+            ElseIf c.Name.Equals("lblLastHand", StringComparison.OrdinalIgnoreCase) Then
+                _lastHand = TryCast(c, Label)
             End If
         Next
         UpdateDisplays()
@@ -72,7 +75,7 @@
                     End If
                 Next
                 Dim handName As String = _manager.GetHandName()
-
+                _lastHand.Text = handName
                 _manager.CreditsRemaining = _manager.CreditsRemaining + _manager.GetPayout(handName)
 
                 If _manager.CreditsRemaining <= 0 Then
